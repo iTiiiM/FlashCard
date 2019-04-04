@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6O-V2-mtR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="FlashCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="LEX-CJ-I0m">
+                                <rect key="frame" x="20" y="198.5" width="335" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nq-dy-XdN">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <state key="normal" title="Beginner"/>
+                                        <connections>
+                                            <action selector="lvlBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1r-GW-yPU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qn6-pW-nkO">
+                                        <rect key="frame" x="0.0" y="120" width="335" height="30"/>
+                                        <state key="normal" title="Intermediate"/>
+                                        <connections>
+                                            <action selector="lvlBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sp7-if-OZE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oM-sT-lNF">
+                                        <rect key="frame" x="0.0" y="240" width="335" height="30"/>
+                                        <state key="normal" title="Advanced"/>
+                                        <connections>
+                                            <action selector="lvlBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kk4-Gq-ij1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnX-1f-x2E">
+                                <rect key="frame" x="20" y="40" width="335" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LEX-CJ-I0m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FSG-5V-rKg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LEX-CJ-I0m" secondAttribute="trailing" constant="20" id="JO3-nV-NFv"/>
+                            <constraint firstItem="LEX-CJ-I0m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Prv-H4-Q8r"/>
+                            <constraint firstItem="LEX-CJ-I0m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nz8-eJ-wwB"/>
+                            <constraint firstItem="XnX-1f-x2E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pA6-yb-2KS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XnX-1f-x2E" secondAttribute="trailing" constant="20" id="pAw-2Y-PCv"/>
+                            <constraint firstItem="XnX-1f-x2E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rIo-7l-vtX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Ugq-8B-UWU"/>
+                    <connections>
+                        <segue destination="L3n-DV-Pfy" kind="show" identifier="toFlashCard" id="nCT-A0-l7J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="129.98500749625188"/>
+        </scene>
+        <!--Flash CardVC-->
+        <scene sceneID="HH8-At-bPB">
+            <objects>
+                <viewController id="L3n-DV-Pfy" customClass="FlashCardVC" customModule="FlashCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzm-xS-ctm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg6-6V-BPR">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="L3n-DV-Pfy" eventType="touchUpInside" id="5vi-aQ-dCI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKt-dh-V3Q">
+                                <rect key="frame" x="67" y="140" width="240" height="276"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApG-xY-cXZ">
+                                        <rect key="frame" x="20" y="71" width="198" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75863506219999999" green="0.97378667870000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Lkb-k0-jne"/>
+                    </view>
+                    <connections>
+                        <outlet property="flashCardView" destination="PKt-dh-V3Q" id="3Sp-7X-mJe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeB-y2-k4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880.8" y="129.98500749625188"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="a9P-XU-K2N">
+            <objects>
+                <viewController id="tUb-xn-okZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vq-gq-rLo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SwR-Kt-uU6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="vjh-0p-GiF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQP-pN-eIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="896"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wVI-nv-t7l">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Y6O-V2-mtR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wFi-uJ-kYo">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8F0-uB-c4z"/>
+                        <segue destination="tUb-xn-okZ" kind="relationship" relationship="viewControllers" id="xgb-UW-yV9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2z-jt-Ave" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+</document>
