@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6O-V2-mtR">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6O-V2-mtR">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +16,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="LEX-CJ-I0m">
-                                <rect key="frame" x="20" y="198.5" width="335" height="270"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="LEX-CJ-I0m">
+                                <rect key="frame" x="20" y="113.5" width="335" height="440"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nq-dy-XdN">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
-                                        <state key="normal" title="Beginner"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="vmQ-Ig-WFY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="26"/>
+                                        <state key="normal" title="Beginner">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="lvlBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1r-GW-yPU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qn6-pW-nkO">
-                                        <rect key="frame" x="0.0" y="120" width="335" height="30"/>
-                                        <state key="normal" title="Intermediate"/>
+                                        <rect key="frame" x="0.0" y="170" width="335" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="2DS-xa-yfs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="26"/>
+                                        <state key="normal" title="Intermediate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="lvlBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sp7-if-OZE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oM-sT-lNF">
-                                        <rect key="frame" x="0.0" y="240" width="335" height="30"/>
-                                        <state key="normal" title="Advanced"/>
+                                        <rect key="frame" x="0.0" y="340" width="335" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="S4K-ew-oov"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="26"/>
+                                        <state key="normal" title="Advanced">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="lvlBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kk4-Gq-ij1"/>
                                         </connections>
@@ -45,8 +79,8 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnX-1f-x2E">
-                                <rect key="frame" x="20" y="40" width="335" height="30.5"/>
-                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="22"/>
+                                <rect key="frame" x="20" y="40" width="335" height="44"/>
+                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="32"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -56,7 +90,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LEX-CJ-I0m" secondAttribute="trailing" constant="20" id="JO3-nV-NFv"/>
                             <constraint firstItem="LEX-CJ-I0m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Prv-H4-Q8r"/>
                             <constraint firstItem="LEX-CJ-I0m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nz8-eJ-wwB"/>
-                            <constraint firstItem="XnX-1f-x2E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pA6-yb-2KS"/>
+                            <constraint firstItem="XnX-1f-x2E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="pA6-yb-2KS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XnX-1f-x2E" secondAttribute="trailing" constant="20" id="pAw-2Y-PCv"/>
                             <constraint firstItem="XnX-1f-x2E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rIo-7l-vtX"/>
                         </constraints>
@@ -76,33 +110,38 @@
             <objects>
                 <viewController id="L3n-DV-Pfy" customClass="FlashCardVC" customModule="FlashCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fzm-xS-ctm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg6-6V-BPR">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="backBtnPressed:" destination="L3n-DV-Pfy" eventType="touchUpInside" id="5vi-aQ-dCI"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PKt-dh-V3Q">
-                                <rect key="frame" x="67" y="140" width="240" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKt-dh-V3Q">
+                                <rect key="frame" x="87.5" y="198.5" width="200" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApG-xY-cXZ">
-                                        <rect key="frame" x="20" y="71" width="198" height="106"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApG-xY-cXZ">
+                                        <rect key="frame" x="79" y="115" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75863506219999999" green="0.97378667870000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4Pg-PF-Qd5"/>
+                                    <constraint firstItem="ApG-xY-cXZ" firstAttribute="centerX" secondItem="PKt-dh-V3Q" secondAttribute="centerX" id="Cqi-Bj-aiq"/>
+                                    <constraint firstAttribute="height" constant="250" id="YJu-h6-hy5"/>
+                                    <constraint firstItem="ApG-xY-cXZ" firstAttribute="centerY" secondItem="PKt-dh-V3Q" secondAttribute="centerY" id="Yku-Tg-Tyu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PKt-dh-V3Q" firstAttribute="centerY" secondItem="fzm-xS-ctm" secondAttribute="centerY" id="Vs8-Qd-nSG"/>
+                            <constraint firstItem="PKt-dh-V3Q" firstAttribute="centerX" secondItem="fzm-xS-ctm" secondAttribute="centerX" id="kva-07-7Dp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lkb-k0-jne"/>
                     </view>
                     <connections>
@@ -135,6 +174,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Y6O-V2-mtR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wFi-uJ-kYo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
