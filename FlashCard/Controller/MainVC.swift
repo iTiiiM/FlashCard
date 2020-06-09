@@ -8,8 +8,13 @@
 
 import UIKit
 
+enum FlashCardDifficulty {
+    case beginner, intermediate, advanced
+}
+
 class MainVC: UIViewController {
     let toFlashCard = "toFlashCard"
+    var flashCardDifficulty: FlashCardDifficulty?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,20 +22,21 @@ class MainVC: UIViewController {
     }
 
     @IBAction func lvlBtnPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: toFlashCard, sender: sender.titleLabel?.text)
-//        switch sender.titleLabel?.text {
-//        case "Beginner":
-//            print("beginner")
-//        case "Intermediate":
-//
-//        case "Advanced":
-//        default:
-//
+        performSegue(withIdentifier: toFlashCard, sender: nil)
+        switch sender.tag {
+        case 1:
+            flashCardDifficulty = .intermediate
+        case 2:
+            flashCardDifficulty = .advanced
+        default:
+            flashCardDifficulty = .beginner
+        }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == toFlashCard{
             let destinationVC = segue.destination as? FlashCardVC
-            destinationVC?.flashCardLvl = sender as! String
+            destinationVC?.flashCardDifficulty = flashCardDifficulty
         }
     }
     

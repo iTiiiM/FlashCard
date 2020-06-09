@@ -10,7 +10,7 @@ import UIKit
 
 class FlashCardVC: UIViewController {
 
-    var flashCardLvl = ""
+    var flashCardDifficulty: FlashCardDifficulty?
     var cardList: FlashCard?
      @IBOutlet weak var flashCardView: UIView!
     override func viewDidLoad() {
@@ -26,21 +26,16 @@ class FlashCardVC: UIViewController {
         print("Tapped View")
     }
     
-    @IBAction func backBtnPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-   
-    
-    
     func setFlashCardLvl(){
-        switch flashCardLvl {
-        case "Beginner":
+        switch flashCardDifficulty {
+        case .beginner:
             cardList = FlashCard(words: ["Cry", "Draw"], meaning: ["shed tears, typically as an expression of distress, pain, or sorrow.", "produce (a picture or diagram) by making lines and marks, especially with a pen or pencil, on paper."])
+            print("beginner selected")
             
-//        case "Intermediate":
-//
-//        case "Advanced":
+        case .intermediate:
+            print("intermediate selected")
+        case .advanced:
+            print("advanced selected")
         default:
             break
         }
